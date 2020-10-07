@@ -14,13 +14,21 @@ function App() {
     setNotes([...notes, note])
   }
 
+  function handleDelete(id){
+    setNotes(prevNotes=>{
+      return prevNotes.filter((note, index)=>{
+        return index !==id
+      })
+    })
+  }
+
   console.log(notes)
   return (
     <div>
       <Header />
       <Form onAdd={addNote}  />
       {notes.map((noteItem, index)=>{
-        return <Note key={index} id={index} title={noteItem.title}  content={noteItem.content}/>
+        return <Note key={index} id={index} delete={handleDelete} title={noteItem.title}  content={noteItem.content}/>
       })}
       
       <Footer />
