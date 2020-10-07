@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import './Form.css'
 
-function Form(){
+function Form(props){
 
     const[note, setNote]=useState({
         title:"",
@@ -16,14 +16,22 @@ function Form(){
             return {...prevNote, [name]:value}
         })
     }
-    console.log(note)
+    
+    function submitNote(event){
+        event.preventDefault();
+        props.onAdd(note)
+        setNote({
+            title: "",
+            content: ""
+        })
+    }
 
     return(
         <div>
             <form>
                 <input onChange={handleInputChange} value={note.title} name='title' placeholder='Title'></input>
                 <textarea onChange={handleInputChange} name='content' placeholder='Take a note...' rows="3" value={note.content}></textarea>
-                <button>Add</button>
+                <button onClick={submitNote}>Add</button>
             </form>
         </div>
     )
