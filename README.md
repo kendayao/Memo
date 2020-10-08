@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a to-do-list web web application built with REACT.
+This is a notes web web application built with REACT.
 
 ## Table of Contents
 
@@ -20,6 +20,7 @@ This is a to-do-list web web application built with REACT.
 ## Technology
 - REACT
 - REACT Hooks
+- Local Storage
 - HTML
 - CSS 
 - JavaScript
@@ -27,7 +28,7 @@ This is a to-do-list web web application built with REACT.
 
 ## User Story
 
-As a busy programmer, I want a to-do-list application to keep track of my daily chores.
+As a programmer, I want a notes application to keep notes as I learn new technologies
 
 
 ## Installation
@@ -38,7 +39,7 @@ No installation needed.
 
 ## Usage
 
-The deployed application link will take you to the homepage. From the homepage, you can type in your to do list item in the input field. Click on add to add the item to your list. Click on any to-do-list item to delete it from the list.
+The deployed application link will take you to the homepage. From the homepage, you can type in the title of the notes and the content of the notes in the input field. Click on the plus sign to add the note to your list. Click on the garbage can icon to delete the note from your list. 
 
 
 ## License
@@ -67,6 +68,6 @@ For any questions, please contact kendayao at kendayao@gmail.com
 
 ## Deployed Application URL
 
-Deployed application link: https://kendayao.github.io/To-Do-List/
+Deployed application link: https://kendayao.github.io/Memo/
 
 <img src="public/memo.png" width="500" height="350">
