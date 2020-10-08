@@ -26,9 +26,12 @@ function Form(props){
         })
     }
 
+   
+  
+
     return(
         <div>
-            <form>
+            <form className='create-note'>
                 <input onChange={handleInputChange} value={note.title} name='title' placeholder='Title'></input>
                 <textarea onChange={handleInputChange} name='content' placeholder='Take a note...' rows="3" value={note.content}></textarea>
                 <button onClick={submitNote}>Add</button>

@@ -1,17 +1,23 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from './components/header/Header'
 import Form from './components/form/Form'
 import Footer from './components/footer/Footer'
 import Note from './components/note/Note'
-import notes from './notedata'
 import './App.css';
 
 function App() {
 
+  useEffect(()=>{
+    const storedToDos=JSON.parse(localStorage.getItem('toDo'))
+    setNotes(storedToDos)
+},[])
+  
   const[notes, setNotes]=useState([])
   
   function addNote(note){
-    setNotes([...notes, note])
+    setNotes(prevNotes=>
+      [...prevNotes, note]
+    )
   }
 
   function handleDelete(id){
@@ -22,13 +28,17 @@ function App() {
     })
   }
 
-  console.log(notes)
+  useEffect(()=>{
+    localStorage.setItem('toDo', JSON.stringify(notes))
+},[notes])
+
+  
   return (
     <div>
       <Header />
-      <Form onAdd={addNote}  />
+      <Form onAdd={addNote} notes={notes}  />
       {notes.map((noteItem, index)=>{
-        return <Note key={index} id={index} delete={handleDelete} title={noteItem.title}  content={noteItem.content}/>
+        return <Note key={index} id={index} delete={handleDelete} title={noteItem.title}  content={noteItem.content} />
       })}
       
       <Footer />
