@@ -9,7 +9,7 @@
 }
 
 .note h1{
-    font-size: 1.8em;
+    font-size: 1.4em;
     margin-bottom: 6px;
 }
 
@@ -23,8 +23,8 @@
 .note button {
     position: relative;
     float: right;
-    margin-right: 10px;
-    color: #f5ba13;
+    margin-right: -5px;
+    color: #1e5f74;
     background-color: #fff;
     border: none;
     width: 36px;

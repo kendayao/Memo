@@ -4,7 +4,7 @@ import './Header.css'
 function Header(){
     return (
         <header>
-            <h1>Memo</h1>
+            <img className="logo" alt="memo-logo" src="icons/memo_logo(1).png" /><h1>Memo</h1>
         </header>
     )
 }
