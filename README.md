@@ -69,5 +69,6 @@ For any questions, please contact kendayao at kendayao@gmail.com
 ## Deployed Application URL
 
 Deployed application link: https://kendayao.github.io/Memo/
+Video Demo: https://giphy.com/gifs/6ivebP3GfO7kq1M6j1/fullscreen
 
 <img src="public/memo.png" width="500" height="350">

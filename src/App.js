@@ -7,12 +7,12 @@ import './App.css';
 
 function App() {
 
-  useEffect(()=>{
-    const storedToDos=JSON.parse(localStorage.getItem('toDo'))
-    setNotes(storedToDos)
-},[])
+//   useEffect(()=>{
+//     const storedToDos=JSON.parse(localStorage.getItem('toDo'))
+//     setNotes(storedToDos)
+// },[])
   
-  const[notes, setNotes]=useState([])
+  const[notes, setNotes]=useState(JSON.parse(localStorage.getItem('toDo')) || [])
   
   function addNote(note){
     setNotes(prevNotes=>
